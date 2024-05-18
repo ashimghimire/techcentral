@@ -24,6 +24,14 @@ body{
     padding: 24px;
 }
 
+a{
+    text-decoration: none;
+    color:inherit;
+    &:hover{
+        text-decoration: underline; 
+    }
+}
+
 .divider-vertical {
       width: 1px; 
       background-color: rgb(195, 195, 195); 
@@ -34,6 +42,10 @@ body{
 img {
     object-fit: cover;
     object-position: bottom;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+        transform: scale(1.2);
+    }
 }
 
 hr.divider-horizontal{
@@ -130,6 +142,10 @@ hr.divider-horizontal{
                     line-height: $line-height;
                     font-size:$font-size-normal ;
                 }
+            }
+            .image-box{
+                height: 111px;
+                overflow: hidden;
             }
             .image{
                 flex-basis: 40%;
